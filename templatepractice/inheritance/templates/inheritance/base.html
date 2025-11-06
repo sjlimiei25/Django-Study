@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}XXX{% endblock %}</title>
+</head>
+<body>
+  <header>
+    <h2>헤더 영역</h2>
+    <nav>
+      <a href="{% url 'inheritance:index' %}">메인</a> |
+      <a href="{% url 'inheritance:sub' %}">서브</a> |
+      <a href="#">서브2</a> 
+    </nav>
+  </header>
+
+  <main>
+    <h2>{% block content %}XXX{% endblock %}</h2>
+  </main>
+
+  <footer>
+    <h2>푸터 영역</h2>
+  </footer>
+</body>
+</html>

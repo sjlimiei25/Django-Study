@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>템플릿 실습</title>
+</head>
+<body>
+  <h1>Django 템플릿 실습</h1>
+  <!-- ul>(li>a[href=#])*3 -->
+  <ul>
+    <li><a href="{% url 'variable:index' %}">변수와 필터 실습</a></li>
+    <li><a href="{% url 'tag:index' %}">태그 실습(조건문, 반복문, 정적파일)</a></li>
+    <li><a href="{% url 'inheritance:index' %}">템플릿 상속 실습</a></li>
+  </ul>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!-- variable/templates/variable/variable.html  -->
+ <h1>변수와 필터 실습</h1>
+
+ <h2>변수 출력</h2>
+
+ <p>이름: {{ name }}</p>
+ <p>나이: {{ age }}</p>
+ <p>노래 목록</p>
+ <ul>
+  <li>{{ songs.0 }}</li>
+  <li>{{ songs.1 }}</li>
+  <li>{{ songs.2 }}</li>
+ </ul>
+ <p>소개: {{ introduce }}</p>
+ 
+ <hr/>
+
+ <h2>필터</h2>
+<!-- p*5 -->
+ <p>소문자로 변환(이름): {{ name|lower }}</p>
+ <p>대문자로 변환(이름): {{ name|upper }}</p>
+ <p>노래 개수(노래목록): {{ songs|length }}</p>
+
+ <p>HTML 이스케이프: {{ introduce }}</p>
+ <p>HTML 이스케이프 비활성화: {{ introduce|safe }}</p>
+ <p>HTML 이스케이프 비활성화 (태그 사용)</p>
+ {% autoescape off %}
+  {{ introduce }}
+ {% endautoescape %}
+ <br/>
+
+ <p>날짜 포맷: {{ today|date:"Y-m-d h:i:s.u" }}</p>
+
+ <p>소숫점 표현: {{ pi }} / {{ pi|floatformat }} / {{ pi|floatformat:2 }}</p>

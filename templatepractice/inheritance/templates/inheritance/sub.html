@@ -1,0 +1,10 @@
+{% extends "inheritance/base.html" %}
+
+{% block title %}
+서브 페이지
+{% endblock %}
+
+{% block content %}
+{{ block.super }}   {# 부모 템플릿의 해당 블록 영역 내용을 출력하고자 할 때 사용 #}
+서브 화면
+{% endblock %}

@@ -1,0 +1,26 @@
+<h1>반복문 연습</h1>
+
+<!--
+      출력 예시
+
+      - 메뉴이름 - 메뉴가격'원'
+      - 메뉴이름 - 메뉴가격'원'
+
+      만약, 품절상태라면 
+      메뉴이름 - 메뉴가격'원' (품절)
+-->
+<ul>
+
+  {% for menu in menu_list %}
+    {# 메뉴 이름만 출력 #}
+    <li>
+      {{ menu.name }} - {{ menu.price }}원 
+
+      {% if menu.is_soldout %}
+      <b>(품절)</b>
+      {% endif %}
+    </li>
+
+  {% endfor %}
+</ul>
+<a href="{% url 'tag:index' %}">돌아가기</a>

@@ -1,0 +1,26 @@
+<!-- ul>(li>a[href=#])*3 -->
+<ul>
+  {# 한줄 주석 #}
+  {% comment %}
+   TODO: '조건문 연습' 링크 클릭 시 
+            tag/if_tag.html 템플릿 파일이 표시되도록 처리해보자 
+          - 요청 url : http://.../tag/if/
+      1) 템플릿 파일 추가 : tag\templates\tag\if_tag.html
+      2) views에 템플릿 파일 처리 함수 추가
+      3) urls에 요청url과 views 함수 연결
+  {% endcomment %}
+ <li><a href="{% url 'tag:if' %}">조건문 연습</a></li>
+ {% comment %}
+    '반복문 연습' 링크 클릭 시 http://.../tag/for 주소로 요청
+    tag/for_tag.html 페이지를 응답
+ {% endcomment %}
+ <li><a href="{% url 'tag:for' %}">반복문 연습</a></li>
+ {% comment %}
+    '정적 파일 연습' 링크 클릭 시 http://.../tag/static 주소로 요청
+    tag/static_tag.html 페이지 응답
+ {% endcomment %}
+ <li><a href="{% url 'tag:static' %}">정적 파일 연습</a></li>
+</ul>
+
+<hr/>
+<a href="{% url 'main' %}">메인으로 돌아가기</a>
