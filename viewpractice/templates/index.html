@@ -1,0 +1,26 @@
+<!-- templates/index.html -->
+ <!DOCTYPE html>
+ <html lang="ko">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>뷰 실습</title>
+ </head>
+ <body>
+  <h1>Django 뷰(View) 실습</h1>
+  <p>View : 비즈니스 처리 로직</p>
+  <p>요청을 받아 해당 요청에 대한 처리 후 응답</p>
+
+  <hr/>
+
+  <!-- a[href=#]*2 -->
+  <a href="">함수형 뷰(FBV)</a> |
+  <a href="#">클래스형 뷰(CBV)</a>
+
+  <hr />
+
+  {% block menu %} {% endblock %}
+  {% block content %} {% endblock %}
+
+ </body>
+ </html>
