@@ -1,1 +1,31 @@
-<h1>함수형 뷰 ~</h1>
+{% extends 'index.html' %}
+
+{% block menu %} 
+  <h1>함수형 뷰 ~</h1>  
+{% endblock %}
+
+{% block content %}
+
+<!-- table>(thead>(tr>th*5))+(tbody>(tr>td*5)) -->
+<table border="1">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>상품명</th>
+      <th>가격</th>
+      <th>재고</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>아이폰17</td>
+      <td>200</td>
+      <td>10</td>
+      <td>신상폰입니다.</td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

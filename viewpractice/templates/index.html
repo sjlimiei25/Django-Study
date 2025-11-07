@@ -14,13 +14,15 @@
   <hr/>
 
   <!-- a[href=#]*2 -->
-  <a href="">함수형 뷰(FBV)</a> |
+  <a href="{% url 'funcview:index' %}">함수형 뷰(FBV)</a> |
   <a href="#">클래스형 뷰(CBV)</a>
 
   <hr />
 
+  
   {% block menu %} {% endblock %}
   {% block content %} {% endblock %}
+
 
  </body>
  </html>
