@@ -23,7 +23,10 @@
     {% for p in list %}
     <tr>
       <td>{{ forloop.counter }}</td>
-      <td>{{ p.name }}</td>
+      <td>
+        {# URL 주소: /fv/detail?id=1 #}
+        <a href="{% url 'funcview:detail' %}?id={{ p.id }}">{{ p.name }}</a>
+      </td>
       <td>{{ p.price }}</td>
       <td>{{ p.stock }}</td>
       <td>{{ p.desc }}</td>
