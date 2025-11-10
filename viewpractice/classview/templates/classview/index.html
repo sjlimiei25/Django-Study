@@ -1,0 +1,38 @@
+{% extends 'index.html' %}
+
+{% block menu %}
+<h1>클래스형 뷰~</h1>
+{% endblock %}
+
+{% block content %}
+
+<!-- table>(thead>(tr>th*5))+(tbody>(tr>td*5)) -->
+<a href="{% url 'classview:new' %}">추가</a>
+<br><br>
+<table border="1">
+  <thead>
+    <tr>
+      <th>No</th>
+      <th>상품명</th>
+      <th>가격</th>
+      <th>재고</th>
+      <th>설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for p in list %}
+    <tr>
+      <td>{{ forloop.counter }}</td>
+      <td>
+        {# URL 주소: /fv/detail?id=1 #}
+        <a href="#">{{ p.name }}</a>
+      </td>
+      <td>{{ p.price }}</td>
+      <td>{{ p.stock }}</td>
+      <td>{{ p.desc }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}
