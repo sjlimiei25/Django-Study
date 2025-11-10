@@ -1,0 +1,14 @@
+{% extends 'index.html' %}
+
+{% block menu %}
+<h1>상세 페이지</h1>
+{% endblock %}
+
+{% block content %}
+<p>상품명: {{ product.name }}</p>
+<p>가격: {{ product.price }}</p>
+<p>재고: {{ product.stock }}</p>
+<p>설명: </p>
+{{ product.desc }}
+
+{% endblock %}

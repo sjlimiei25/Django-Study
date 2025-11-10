@@ -24,8 +24,8 @@
     <tr>
       <td>{{ forloop.counter }}</td>
       <td>
-        {# URL 주소: /fv/detail?id=1 #}
-        <a href="#">{{ p.name }}</a>
+        {# URL 주소: /fv/detail/1 #}
+        <a href="{% url 'classview:detail' p.id %}">{{ p.name }}</a>
       </td>
       <td>{{ p.price }}</td>
       <td>{{ p.stock }}</td>
