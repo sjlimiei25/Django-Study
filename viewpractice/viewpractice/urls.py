@@ -24,4 +24,5 @@ urlpatterns = [
     path('', TemplateView.as_view(template_name='index.html'), name='index'),
 
     path('fv/', include('funcview.urls')),
+    path('cv/', include('classview.urls')),
 ]
