@@ -3,6 +3,7 @@ from django.http import JsonResponse
 
 import requests
 from bs4 import BeautifulSoup
+from urllib import parse
 
 # Create your views here.
 
@@ -19,6 +20,8 @@ def scrape_stock_by_name(request):
   print(f'request data ----> {name}')
 
   # -------- * --------
+  # 전달된 종목명에 대해 인코딩 처리 (=> 한글인 경우 문제!)
+  name = parse.quote(name, encoding='EUC-KR')
 
   # 네이버 증권 페이지, 스크래핑
   request_url = f'https://finance.naver.com/search/search.naver?query={name}&endUrl='
