@@ -39,9 +39,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'stockapp',
+
+    'corsheaders',      # CORS 관련 앱 추가
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',    # CORS 관련 미들웨어 추가 (최상단에 추가해야 함!!)
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -50,6 +54,15 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# 모든 도메인을 허용 (개발시에만 사용)
+# CORS_ALLOW_ALL_ORIGINS = True
+
+# 특정 도메인만 허용
+CORS_ALLOWED_ORIGINS = [
+  'http://localhost:3000'
+]
+
 
 ROOT_URLCONF = 'stockproject.urls'
 
